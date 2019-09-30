@@ -24,9 +24,9 @@ btn.addEventListener("click", function(){
     });
 });
 
-message.addEventListener('keypress',function(){
-    socket.emit('typing', handle.value );
-});
+// message.addEventListener('touchend',function(){
+//     socket.emit('typing', handle.value );
+// });
 
 
 
@@ -35,6 +35,6 @@ socket.on('chat', function(data){
     output.innerHTML += '<p><strong> ' + data.handle + ':</strong>' + data.message + '</p>';
 });
 
-socket.on('typing', function(data){
-    feedback.innerHTML = '<p>'+ data +': is typing a message..</p>';
-})
+// socket.on('typing', function(data){
+//     feedback.innerHTML = '<p>'+ data +': is typing a message..</p>';
+// })
